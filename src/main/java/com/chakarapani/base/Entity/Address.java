@@ -8,14 +8,13 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.UUID;
 
-
+// Address Entity with all getter setter and constructors with proper json mapping in the response value
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @Entity
 @Table(name = "address")
 public class Address {
