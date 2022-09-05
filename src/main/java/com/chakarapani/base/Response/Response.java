@@ -12,6 +12,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
+
+// Declare the response body so that later we use in the other projects
 @SuppressWarnings("unused")
 public class Response {
     @Contract("_, _, _, _ -> new")

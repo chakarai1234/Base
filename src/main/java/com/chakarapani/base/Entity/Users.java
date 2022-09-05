@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.UUID;
 
+// Users Entity with all getter setter and constructors with proper json mapping in the response value
 @SuppressWarnings("unused")
 @Builder
 @AllArgsConstructor
