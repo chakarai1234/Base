@@ -28,7 +28,7 @@ public class RequestToJsonStringConverter {
 
 
     // Declare the generateJsonNode to get the node from the request
-    public String generateJsonNode(RequestEntity<Void> request, String getValueFrom) throws JsonProcessingException {
+    public String generateStringResponseFromRequest(RequestEntity<Void> request, String getValueFrom) throws JsonProcessingException {
         Object users = Objects.requireNonNull(restTemplate.exchange(request, Object.class).getBody());
 
         String jsonValue = objectMapper.writeValueAsString(users);
