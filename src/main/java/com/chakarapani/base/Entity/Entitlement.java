@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.UUID;
 
 @Builder
@@ -18,18 +17,19 @@ import java.util.UUID;
 @Entity
 @Table(name = "entitlement")
 public class Entitlement {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false, columnDefinition = "uuid")
-    @JsonIgnore
-    private UUID id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", nullable = false, columnDefinition = "uuid")
+	@JsonIgnore
+	private UUID id;
 
-    @JsonProperty("user_id")
-    private UUID userId;
+	@JsonProperty("user_id")
+	private UUID userId;
 
-    @JsonProperty("username")
-    private String username;
+	@JsonProperty("username")
+	private String username;
 
-    @JsonProperty("roles")
-    private ArrayList<Roles> roles = new ArrayList<>();
+	@JsonProperty("roles")
+	@Enumerated(EnumType.STRING)
+	private Roles roles;
 }
